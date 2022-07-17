@@ -41,13 +41,15 @@ function woCounter (name) {
 }
 
 function woDoubleCounter (name) {
-  const counter = woCounter(`${name} de Swarte`);
+  const counter = woCounter(`${name} de Swarte`); // reuse the parent object woCounter
 
+  // override the increment
   function increment () {
     counter.increment();
     return counter.increment();
   }
 
+  // create a new instance of object => no prototype.
   return Object.freeze({
     increment
   });
