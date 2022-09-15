@@ -1,4 +1,13 @@
-function createMyArray () {
+/**
+ * @typedef NicoType
+ * @property {string} name - my name
+ */
+
+/**
+ * @param {NicoType} input - the input
+ *
+ */
+function createMyArray (input) {
   const a = [];
 
   function push (...elements) {
